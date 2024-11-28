@@ -30,6 +30,7 @@ class BluetoothVC: DemoVC {
     override func viewDidLoad() {
         type = .bluetooth
         super.viewDidLoad()
+        AppDelegate.setBgFetchMinTime()
         // centralManager
         centralManager = CBCentralManager(delegate: self, queue: nil, options: [
             CBCentralManagerOptionShowPowerAlertKey: true,
